@@ -23,18 +23,15 @@ componentDidMount()
     headers: { 'Content-Type': 'application/json' ,
   },
 };
-console.log("component loaded");
-console.log(this.state.isLoggedIn);
+//console.log("Table component loaded");
+
   fetch('https://react-293106.wn.r.appspot.com/crud', requestOptions)
-    .then(response => { console.log("response recived");
-    console.log(response);
-    console.log(response.body);
-    return response.json();
+    .then(response => { return response.json();
     })
     .then(items => {
       this.setState({items})
       ;})
-     .catch(err => {console.log("reste error");console.log(err);})
+     .catch(err => {console.log("Get Table Data error");console.log(err);})
 }
 
 handleClick(event) {
@@ -138,7 +135,6 @@ handleClick(event) {
           {items}
         </tbody>
         <tfoot>
-          
         </tfoot>
       </Table>
       
