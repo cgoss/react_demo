@@ -1,0 +1,3 @@
+{
+    "mongoDBConnection":"mongodb+srv://readOnly:readOnlyP455word@cluster0.csogb.mongodb.net/<dbname>?retryWrites=true&w=majority"
+}
