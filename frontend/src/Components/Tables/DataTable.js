@@ -8,7 +8,6 @@ constructor(props)
 {
   super(props);
   this.state = {
-    isLoggedIn:null,
     currentPage:0,
     itemsPerPage:10,
     items:[],
@@ -18,20 +17,7 @@ constructor(props)
 
 componentDidMount()
 {
-  const requestOptions = {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' ,
-  },
-};
-//console.log("Table component loaded");
-
-  fetch('https://react-293106.wn.r.appspot.com/crud', requestOptions)
-    .then(response => { return response.json();
-    })
-    .then(items => {
-      this.setState({items})
-      ;})
-     .catch(err => {console.log("Get Table Data error");console.log(err);})
+  //console.log("table component loaded")
 }
 
 handleClick(event) {
@@ -55,7 +41,6 @@ handleClick(event) {
       })
     })
       .then(response => {
-        console.log(response);
         this.props.deleteItemFromState(_id);
       })
       .catch(err => console.log(err))

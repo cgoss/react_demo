@@ -12,12 +12,11 @@ class App extends Component {
       isSignedIn: false,
       authInstance  : null
     }
-     console.log(JSON.stringify(this.state))
   }
  
   
   componentDidMount(){
- console.log("component mounted")
+ //console.log("component mounted")
   } 
 ///#region CRUD
 
