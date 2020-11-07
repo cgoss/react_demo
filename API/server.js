@@ -10,7 +10,7 @@ const morgan = require('morgan') // logs requests
 
 const MongoClient = require('mongodb').MongoClient;
 //Extract into config file 
-const uri = "mongodb+srv://readOnly:readOnlyP455word@cluster0.csogb.mongodb.net/fwdsec?retryWrites=true&w=majority"; 
+const uri = "<configuredAtDeployment>"; 
 const client = new MongoClient(uri,{newUserUrlParser:false,useUnifiedTopology: true});
 
 
